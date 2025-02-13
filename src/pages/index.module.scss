@@ -1,42 +1,112 @@
-// .spaceBackground {
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   background: radial-gradient(
-//     circle at top,
-//     #111827,
-//     #0a0f1a
-//   ); // Deep space feel
-//   overflow: hidden;
+.page {
+  padding: 50px 70px;
+  .heroSection {
+    width: calc(100vw - 140px);
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-//   // Subtle noise overlay for texture
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     background: url("https://www.transparenttextures.com/patterns/noisy.png");
-//     opacity: 0.5; // Light texture effect
-//   }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #3a2e25;
+      gap: 32px;
 
-//   // Animated Tiny Stars
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     background: radial-gradient(red 2%, transparent 10%) repeat;
-//     background-size: 2px 2px;
-//     animation: twinkle 4s infinite alternate ease-in-out;
-//     opacity: 0.2;
-//   }
-// }
+      .title {
+        font-weight: 800;
+        font-size: 2rem;
+        text-align: center;
 
-// @keyframes twinkle {
-//   0% {
-//     opacity: 0.1;
-//   }
-//   100% {
-//     opacity: 0.3;
-//   }
-// }
+        span {
+          color: #8b5e3c;
+        }
+      }
+      .tagline {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .cta {
+        padding: 12px 20px;
+        color: #f6f6f6;
+        background-color: #8b5e3c;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+  .aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    .aboutContainer {
+      padding: 20px 44px;
+      border-radius: 12px;
+      width: 80vw;
+      // border: 1px solid #8b5e3c;
+      background-color: #f3ede0;
+      color: #8b5e3c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .about {
+        width: 56vw;
+        // height: 40vh;
+        padding: 24px 0px;
+        text-align: center;
+        line-height: 24px;
+      }
+      .technical {
+        padding-bottom: 12px;
+      }
+      .skillsRow {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .skillsContainer {
+          width: 30%;
+          .heading {
+            font-weight: 500;
+            border-bottom: 1px solid #8b5e3c;
+            padding-bottom: 8px;
+          }
+          li {
+            font-size: 0.9rem;
+            padding-bottom: 8px;
+          }
+        }
+      }
+      .resume {
+        padding: 12px 20px;
+        background-color: #6a8e3c; /* Muted Olive Green */
+        color: #f6f6f6; /* White text for contrast */
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .skillsRow {
+    // flex-direction: column;
+    align-items: center;
+    // justify-content: space-between !important;
+  }
+  .skillsContainer {
+    width: 80% !important;
+  }
+}

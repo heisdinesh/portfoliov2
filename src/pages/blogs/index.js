@@ -234,6 +234,12 @@ const Blogs = () => {
   const shouldAddPlaceholder = blogList.length % 2 !== 0;
   return (
     <div className={styles.page}>
+      <div className={styles.titleContainer}>
+        <p className={styles.title}>Blogs </p>
+        <p className={styles.tagline}>
+          Insights, stories, and ideas—freshly brewed for you!
+        </p>
+      </div>
       <div className={styles.blogContainer}>
         {blogList.map((blog) => (
           <BlogCover
