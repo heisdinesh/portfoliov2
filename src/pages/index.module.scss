@@ -1,0 +1,42 @@
+// .spaceBackground {
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   background: radial-gradient(
+//     circle at top,
+//     #111827,
+//     #0a0f1a
+//   ); // Deep space feel
+//   overflow: hidden;
+
+//   // Subtle noise overlay for texture
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: url("https://www.transparenttextures.com/patterns/noisy.png");
+//     opacity: 0.5; // Light texture effect
+//   }
+
+//   // Animated Tiny Stars
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: radial-gradient(red 2%, transparent 10%) repeat;
+//     background-size: 2px 2px;
+//     animation: twinkle 4s infinite alternate ease-in-out;
+//     opacity: 0.2;
+//   }
+// }
+
+// @keyframes twinkle {
+//   0% {
+//     opacity: 0.1;
+//   }
+//   100% {
+//     opacity: 0.3;
+//   }
+// }
