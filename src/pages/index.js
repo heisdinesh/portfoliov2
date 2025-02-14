@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import { CustomImages } from "@/assets";
 import ProjectCover from "@/components/projectCover";
+import Testimonials from "@/components/testimonials";
 
 const Landing = () => {
   const projectList = [
@@ -27,8 +28,25 @@ const Landing = () => {
     {
       name: "E-Gazette",
       description: "Newsletter for a club.",
-      tech: "NextJS | Express | NodeJs| MongoDB | Google Analytics | Metabase",
+      tech: "Adobe Illustrator",
       imageSrc: CustomImages.eGazette,
+    },
+  ];
+  const testimonialsList = [
+    {
+      author: "Roshaan Ray",
+      designation: "Founder & CEO of SeedPaperIndia",
+      quote: `It was a Pleasure to Work with Dinesh and would highly recommend him to any organisation or company, here were a few of the many advantage which I observed while working with him-
+Very Quick at his work and delivers on time
+Flexible and also uses his own Ideas
+Has great design and IT Skills
+Recently won a National Level Hackathon
+Great to work with and has displayed leadership qualities in his Work!! Wishing him all the Success in the Future`,
+    },
+    {
+      author: "Naiyaan",
+      designation: "CTO of HealthSphere",
+      quote: `Dinesh is a gifted logo-designer with a rare combination of patience, creative, and research skills. I’m lucky to have worked with Dinesh, his initial designs were spot on in terms of matching our brief, and he was able to articulate clearly and concisely why he had included particular features of the logo, how they would work to achieve our goals and appeal to our target market.`,
     },
   ];
   return (
@@ -43,7 +61,13 @@ const Landing = () => {
             {" "}
             Basically, I create, shape, and share.
           </p>
-          <Image src={CustomImages.dineshImage} width={240} height={240} />
+          <Image
+            alt="dinesh photo"
+            priority
+            src={CustomImages.dineshImage}
+            width={240}
+            height={240}
+          />
           <button className={styles.cta}>View Projects</button>
         </div>
       </section>
@@ -145,6 +169,13 @@ const Landing = () => {
             />
           ))}
         </div>
+      </section>
+      <section className={styles.testimonialSection}>
+        <div className={styles.headingContainer}>
+          <h2 className={styles.heading}>Testimonials</h2>
+          <p className={styles.tagline}>What People Say About My Work</p>
+        </div>
+        <Testimonials />
       </section>
     </div>
   );

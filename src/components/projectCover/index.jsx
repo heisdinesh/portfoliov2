@@ -5,7 +5,7 @@ import Image from "next/image";
 const ProjectCover = ({ imageSrc, description, name, tech }) => {
   return (
     <div className={styles.projectCoverContainer}>
-      <Image className={styles.image} src={imageSrc} />
+      <Image alt={description} className={styles.image} src={imageSrc} />
       <div className={styles.metaData}>
         <p className={styles.name}>{name}</p>
         <p className={styles.description}>{description}</p>

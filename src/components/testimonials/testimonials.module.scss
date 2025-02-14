@@ -1,0 +1,73 @@
+.swiperContainer {
+  width: 60vw;
+  position: relative;
+  padding: 40px 0; // Adds space to avoid overlap
+
+  .testimonialCard {
+    border-radius: 12px;
+    background-color: #8b5e3c;
+    color: #f6f6f6;
+    line-height: 20px;
+    padding: 48px;
+    font-size: 0.8rem;
+
+    .name {
+      text-align: right;
+      font-weight: 600;
+      padding-top: 24px;
+      margin: 0;
+    }
+
+    .designation {
+      text-align: right;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+
+  /* Pagination */
+  .swiper-pagination {
+    bottom: 90px !important; // Moves pagination further below
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #8b5e3c !important; // Brown color
+    opacity: 0.6 !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #5d3b24 !important; // Darker brown for active dot
+    opacity: 1 !important;
+  }
+
+  /* Navigation Buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #8b5e3c !important; // Brown color
+    font-size: 24px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); // Optional: White background for visibility
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .swiper-button-prev {
+    left: -80px !important; // Moves button outside the slide
+  }
+
+  .swiper-button-next {
+    right: -80px !important; // Moves button outside the slide
+  }
+}
