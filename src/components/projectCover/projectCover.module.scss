@@ -1,0 +1,31 @@
+.projectCoverContainer {
+  border-radius: 12px;
+  background-color: #fff;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px 0px;
+  .image {
+    border-radius: 12px 12px 0px 0px;
+    width: 250px;
+    height: 320px;
+  }
+  .metaData {
+    // background-color: red;
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      padding: 12px;
+    }
+    .description {
+      font-size: 10px;
+      color: #808080;
+      padding: 0px 12px 12px 12px;
+    }
+    .tech {
+      font-size: 10px;
+      color: #808080;
+      width: 240px;
+      padding: 0px 12px 12px 12px;
+      flex-grow: 1;
+    }
+  }
+}

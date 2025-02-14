@@ -2,8 +2,35 @@ import React from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import { CustomImages } from "@/assets";
+import ProjectCover from "@/components/projectCover";
 
 const Landing = () => {
+  const projectList = [
+    {
+      name: "EWCE",
+      description: "Website for College.",
+      tech: "Figma | Adobe Illustrator",
+      imageSrc: CustomImages.ewceCover,
+    },
+    {
+      name: "Ruchi Meals",
+      description: "Food Delivery App.",
+      tech: "NextJS | Express | NodeJs| MongoDB | Google Analytics | Metabase",
+      imageSrc: CustomImages.ruchiMealsCover,
+    },
+    {
+      name: "Check In System",
+      description: "Food Delivery App.",
+      tech: "React | Express | MongoDB ",
+      imageSrc: CustomImages.checkinSystem,
+    },
+    {
+      name: "E-Gazette",
+      description: "Newsletter for a club.",
+      tech: "NextJS | Express | NodeJs| MongoDB | Google Analytics | Metabase",
+      imageSrc: CustomImages.eGazette,
+    },
+  ];
   return (
     <div className={styles.page}>
       <section className={styles.heroSection}>
@@ -99,6 +126,24 @@ const Landing = () => {
             </div>
           </div>{" "}
           <button className={styles.resume}>Download Resume</button>
+        </div>
+      </section>
+      <section className={styles.projectSection}>
+        <div className={styles.headingContainer}>
+          <h2 className={styles.heading}>My Recent Work</h2>
+          <p className={styles.tagline}>
+            Here are a few past design projects I've worked on.
+          </p>
+        </div>
+        <div className={styles.projectsContainer}>
+          {projectList.map((project) => (
+            <ProjectCover
+              imageSrc={project.imageSrc}
+              description={project.description}
+              name={project.name}
+              tech={project.tech}
+            />
+          ))}
         </div>
       </section>
     </div>
