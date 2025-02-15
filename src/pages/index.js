@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CustomImages } from "@/assets";
 import ProjectCover from "@/components/projectCover";
 import Testimonials from "@/components/testimonials";
+import Footer from "@/components/footer";
 
 const Landing = () => {
   const projectList = [
@@ -177,6 +178,7 @@ Great to work with and has displayed leadership qualities in his Work!! Wishing 
         </div>
         <Testimonials />
       </section>
+      <Footer />
     </div>
   );
 };
