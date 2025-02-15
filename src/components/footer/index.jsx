@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 
 const Footer = () => {
+  // commit
   return (
     <div className={styles.footer}>
       <div className={styles.socialMedia}>
